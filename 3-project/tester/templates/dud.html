@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown Events</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<!-- Nav Bar -->
+<div class="row">
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/dud">Risk Comparison.</a>
+        <a href="/ticker">ETF Comparison.</a>
+        <a href="/dud">Machine Learning.</a>
+        <a href="/dud">Filler Page.</a>
+        <a href="/dud">About Me.</a>
+    </div>
+</div>
+
+<!-- BODY -->
+<body>
+    <row>
+        <h2>ETF Performance</h2>
+        <select id="selDataset" onchange="buildStats(this.value)"></select>
+    </row>
+    <row>
+        <div class="container">
+            <div class="col-lg-8 col-sm-12" id="lineGraph">
+            </div>
+            <div class="panel panel-primary col-lg-4 col-sm-12">
+                <div class="panel-heading">
+                  <h3 class="panel-title">ETF Data</h3>
+                </div>
+                <div id="etfScorecard" class="panel-body"></div>
+              </div>
+        </div>
+    </row>
+<!-- Bottom Page Selection -->
+<div class="row">
+
+    <div class="container">
+        <!-- {{ url_for('static', filename='iconetf_m.png') }} -->
+            <div class="col-sm-1"></div>
+            <!-- Page 1 -->
+            <div class="col-sm-2">
+                <div class="tinyinfo">
+                    <a href="/ticker" class="tinypic"><img src="{{ url_for('static', filename='images/iconau_m.png') }}"></a>
+                    <h5><p>ETF Comparison.</p></h5>
+                </div>
+            </div>
+            <!-- Page 2 -->
+            <div class="col-sm-2">
+                <div class="tinyinfo">
+                        <a href="/dud" class="tinypic"><img src="./images/iconrisk_s.png"></a>
+                    <h5><p>Risk Comparison.</p></h5>
+                </div>
+            </div>
+            <!-- Page 3 -->
+            <div class="col-sm-2">
+                <div class="tinyinfo">
+                        <a href="/dud" class="tinypic"><img src="./images/iconrisk_s.png"></a>
+                    <h5><p>Machine Learning.</p></h5>
+                </div>
+            </div>
+                        <!-- Page 2 -->
+            <div class="col-sm-2">
+                <div class="tinyinfo">
+                        <a href="/dud" class="tinypic"><img src="./images/iconrisk_s.png"></a>
+                    <h5><p>Filler Spot.</p></h5>
+                </div>
+            </div>
+            <!-- Page 3 -->
+            <div class="col-sm-2">
+                <div class="tinyinfo">
+                        <a href="/dud" class="tinypic"><img src="./images/iconrisk_s.png"></a>
+                    <h5><p>About Us.</p></h5>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<br>
+</div>
+    <div class="row" id="footer">
+    
+        <p> by Quaid Besing, Ashwin Jayaram, Kat Muraski, Philip Penrose.
+            <a href="https://example.com/">About us.</a></p>
+
+    </div>
+
+</div>
+
+</div>
+</body>
+    <!-- <script src="data.js"></script> -->
+    <script src="{{ url_for('static', filename='js/app2.js') }}"></script>
+    <script src="{{ url_for('static', filename='template.css') }}"></script>
+    <link rel="stylesheet" href="./static/template.css">
+</html>
